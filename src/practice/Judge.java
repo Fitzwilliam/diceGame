@@ -23,8 +23,10 @@ public class Judge {
 	public void speak(Recorder speaker){
 		speaker.speak((Player)(list.get(0)),(FraudPlayer)(list.get(1)));
 	}
-	public String scoring(){
-		return ((Player) list.get(0)).getScore() > ((FraudPlayer) list.get(1)).getScore()? ((Player) list.get(0)).getName() : ((FraudPlayer) list.get(1)).getName() ;
+	public void scoring(){
+
+		String winner = ((Player) list.get(0)).getScore() > ((FraudPlayer) list.get(1)).getScore()? ((Player) list.get(0)).getName() : ((FraudPlayer) list.get(1)).getName() ;
+		System.out.println(winner+"ÀÇ ½Â¸®.");
 	}
 	
 	public void start(){

@@ -11,14 +11,14 @@ public class FraudDice {
 			do{
 			num=normalMakeNum();
 		}
-		while(num<5);
+		while(num>=5);
 		return num;
 		}
 		case 2:{
 			do{
 				num=normalMakeNum();
 			}
-			while(num>2);
+			while(num<=2);
 			return num;
 		}
 		default :
@@ -30,5 +30,8 @@ public class FraudDice {
 	}
 	public void setLevel(int level){
 		this.level=level;
+	}
+	public int getLevel(){
+		return this.level;
 	}
 }

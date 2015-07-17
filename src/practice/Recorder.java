@@ -3,6 +3,8 @@ package practice;
 public class Recorder {
 	
 	public void speak(Player player,FraudPlayer fplayer){
-		System.out.println(player.getName()+player.getScore()+fplayer.getName()+fplayer.getScore());
+		String flevel=fplayer.getDiceLevel();
+		fplayer.adjustLevel();
+		System.out.println(player.getName()+player.getScore()+fplayer.getName()+fplayer.getScore()+flevel);
 	}
 }

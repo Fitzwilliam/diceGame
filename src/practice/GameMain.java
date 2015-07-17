@@ -13,6 +13,6 @@ public class GameMain {
 		judge.setNum(5);
 		
 		judge.start();
-		
+		judge.scoring();
 	}
 }

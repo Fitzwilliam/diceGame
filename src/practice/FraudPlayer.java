@@ -16,7 +16,9 @@ public class FraudPlayer {
 	}
 	
 	public void rollDice(){
-		dice.makeNum();
+		score+=dice.makeNum();
+	}
+	public void adjustLevel(){
 		if(opp.getScore()>this.score){
 			dice.setLevel(2);
 		}
@@ -33,5 +35,18 @@ public class FraudPlayer {
 	}
 	public int getScore(){
 		return score;
+	}
+	public String getDiceLevel(){
+		int level=dice.getLevel();
+		switch (level){
+			case 0:
+				return "[NORMAL]";
+			case 1:
+				return "[WEAK]";
+			case 2:
+				return "[STRONG]";
+				default : 
+					return "";
+		}
 	}
 }
